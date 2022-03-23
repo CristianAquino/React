@@ -1,0 +1,51 @@
+import { Fragment, useState, useRef } from 'react';
+import {v4 as uuidv4} from 'uuid';
+import { TodoList } from './components/TodoList';
+export function App(){
+    // const numbers = [1,2,3,4,5,];
+    // const double = numbers.map(element => <li>{element}</li>);
+    // console.log( typeof double);
+
+    // const [actual, setActual] = useState(0);
+
+    // return(
+    //     <div className="container">
+    //         <p className='contador'><ul>{double}</ul></p>
+    //         <p>{actual}</p>
+    //         <button onClick={()=>{
+    //             setActual(actual+1);
+    //         }}>contador</button>
+    //     </div>
+    // );
+    const [todos,setTodos] = useState([
+        {id:1,task:'Tarea1',completed:false}
+    ]);
+    const todoTaskRef = useRef();
+    const toggleTodo = (id)=>{
+        const newTodos = [...todos];
+        const todo = newTodos.find( todo => todo.id = id);
+        todo.completed = !todo.completed;
+        setTodos(newTodos);
+    }
+    const handleTodoAdd = ()=>{
+        const task = todoTaskRef.current.value;
+        if (task ==='') return;
+        setTodos((prevTodos)=>{
+            return [...prevTodos,{id:uuidv4,task,completed:false}];
+        })
+        todoTaskRef.current.value = null;
+    }
+    const handleClearAll = ()=>{
+        const newTodos = todos.filter(todo => !todo.completed);
+        setTodos(newTodos)
+    }
+    return(
+        <Fragment>
+            <TodoList todos={todos} toggleTodo={toggleTodo} />
+            <input ref={todoTaskRef} type="text" placeholder='Nueva Tarea' />
+            <button onClick={handleTodoAdd}>Añadir</button>
+            <button onClick={handleClearAll}>Eliminar</button>
+            <div>Te quedan {todos.filter((todo)=>!todo.completed).length} tareas por terminar</div>
+        </Fragment>
+    );
+}
