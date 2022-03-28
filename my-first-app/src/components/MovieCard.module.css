@@ -6,6 +6,9 @@
     align-items: center;
     padding: 40px;
 }
+.movieCard:hover{
+    opacity: .8;
+}
 .movieImage{
     border-radius: 10px;
     background-color: azure;
