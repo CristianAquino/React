@@ -1,7 +1,7 @@
 import { MovieDetails } from "./pages/MovieDetails";
 import { LandingPage } from "./pages/LandingPage";
 import style from './App.module.css';
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Link, Navigate } from "react-router-dom";
 
 export function App(){
     return (
@@ -13,6 +13,7 @@ export function App(){
                 <Routes>
                     <Route path="/movies/:movieId" element={<MovieDetails />} />
                     <Route path="/" element={<LandingPage />} />
+                    <Route path="*" element={<Navigate replace to="/" />} />
                 </Routes>
             </main>
         </BrowserRouter>
