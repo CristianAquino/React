@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    font-size: 30px;
+}
+.container li{
+    padding: 0 20px;
+}
+.container li a{
+    color: #fff;
+}
