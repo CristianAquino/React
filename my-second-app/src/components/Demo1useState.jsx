@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { useConter } from "../hooks/useFormulario";
+import { useConter } from "../hooks/useConter";
 
 const values = {
   inicio: 20,

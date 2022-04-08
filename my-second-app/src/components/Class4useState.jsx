@@ -6,9 +6,9 @@ import { Demo3useState } from "./Demo3useState";
 export function Class4useState() {
   return (
     <Fragment>
-      {/* <Demo1useState /> */}
+      <Demo1useState />
       {/* <Demo2useState /> */}
-      <Demo3useState />
+      {/* <Demo3useState /> */}
     </Fragment>
   );
 }
