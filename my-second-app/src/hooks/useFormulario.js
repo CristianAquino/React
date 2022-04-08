@@ -6,14 +6,8 @@ export function useFormulario({ type, name }) {
   };
   return { type, name, value, onChange };
 }
-// Esto en el component
-// const values = {
-//   inicio: 20,
-//   increment: 10,
-//   decrement: 2,
-// };
-// const [valueInicio, valueIncremento, valueDecremento] = useConter(values);
-export function useConter({ inicio = 0, increment, decrement = 0 }) {
+
+export function useConter({ inicio = 0, increment = 1, decrement = 0 }) {
   const [value, setValue] = useState(inicio);
 
   function incrementarConter() {
