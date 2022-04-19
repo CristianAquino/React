@@ -8,4 +8,4 @@ connectDB();
 // app.use(cors());
 
 app.listen(PORT);
-console.log("Server in running port 3000");
+console.log("Server in running port 4000");
