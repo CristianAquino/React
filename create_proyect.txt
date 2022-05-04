@@ -1,0 +1,2 @@
+Comando para crear proyecto
+npm create-react-app (nombre del proyecto)

@@ -1,0 +1,8 @@
+https://react-hook-form.com/get-started
+https://www.youtube.com/watch?v=pp2ZmjTBB5M&list=PLPl81lqbj-4KswGEN6o4lF0cscQalpycD&index=12
+https://es.reactjs.org/docs/hooks-overview.html
+https://es.reactjs.org/docs/rendering-elements.html
+https://developer.mozilla.org/es/docs/Web/JavaScript/A_re-introduction_to_JavaScript
+https://reactnative.dev/docs/getting-started
+https://react-bootstrap.github.io/components/modal/
+https://create-react-app.dev/docs/adding-bootstrap/#using-a-custom-theme
